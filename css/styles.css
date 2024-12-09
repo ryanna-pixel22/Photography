@@ -1,0 +1,244 @@
+/* natural box model */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+/* START STYLES HERE */
+/*adobe colors*/
+body{
+  margin:0;
+  background-color:#BBDDF2;
+}
+
+h1,
+h2,
+h3{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } 
+
+h1{
+  color:white;
+  background-color: #BBDDF2;
+  margin: 2.0em 1.0em 2.0em;
+  padding:1.5em;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+header {
+  background-color:#BBDDF2;
+  padding: 0 1.0em;
+}
+h2{
+font-size: 25px;
+padding:0.5em;
+}
+
+
+h3{
+  font-size: 25px;
+  padding:0.5em;
+}
+
+p{
+  font-size:20px;
+  padding:0.5em;
+  display:flex;
+  flex-direction: wrap;
+}
+
+
+
+header h1,
+.container {
+    /* should stretch up to 800px wide and center on the screen */
+width:auto;
+text-align: center;
+margin:0 auto;
+padding:1.5em;
+*/background-color:pink;*/
+}
+
+
+
+nav {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  /* optional but good for control */
+  display: flex;
+  flex-direction: column;
+  gap: 1.0rem;
+}
+nav li {
+  list-style-type: none;
+  padding: 0.5em;
+}
+.toggle:hover {
+  color: #B78DF2;
+  cursor: pointer;
+}
+.item {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+.item a:hover {
+  color:#B78DF2;
+}
+.item a {
+  color:white;
+  font-size: 36px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1.0rem;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+#home {
+
+
+}
+
+#contact{
+  background-color: #BBDDF2;
+}
+
+#gallery{
+  background-color: #EFD5F2;
+
+}
+
+#prices{
+background-color:#D2A2F2 ;
+
+.table-2 {
+
+}
+
+.table-2 td, .table-2 th {
+  font-family: Trebuchet, Helvetica, sans-serif;
+}
+
+.table-2 th {
+    table-layout: fixed;
+    width: 40%;
+    border-collapse: collapse;
+    border: 2px solid white;
+}
+
+.table-2 td {
+    table-layout: fixed;
+    width: 40%;
+    border-collapse: collapse;
+    border: 2px solid white;
+}
+.table-2 td{
+    background-color: beige;
+}
+.table-2 th{
+    background-color:green;
+    color:white;
+    
+
+}
+
+#about{
+background-color: #B78DF2;
+}
+
+.carouselExampleIndicators{
+  max-width: 500px;
+  margin:0 auto;
+}
+
+
+
+/* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+/* MEDIA QUERIES FROM LARGEST TO SMALLEST */
+/* Extra small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) {
+
+} */
+
+/* Small devices (landscape phones, less than 768px) */
+/* @media (max-width: 767.98px) {
+
+} */
+
+/* Medium devices (tablets, less than 992px) */
+/* @media (max-width: 991.98px) {
+
+} */
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) {
+
+} */
+
+/* Extra large devices (large desktops)
+No media query since the extra-large breakpoint has no upper bound on its width */
