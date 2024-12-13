@@ -2,7 +2,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -27,76 +30,59 @@ html {
 
 /* START STYLES HERE */
 /*adobe colors*/
-body{
-  margin:0;
-  background-color:#BBDDF2;
+body {
+  margin: 0;
+  /*https://cssgradient.io*/
+    background: rgb(239, 213, 242);
+    background: radial-gradient(circle, rgba(239, 213, 242, 1) 16%, rgba(210, 162, 242, 1) 30%, rgba(183, 141, 242, 1) 49%, rgba(109, 191, 242, 1) 69%, rgba(187, 221, 242, 1) 86%);
+    position: relative;
+    z-index: 1;
 }
 
-h1,
-h2,
-h3{
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  } 
-
-h1{
-  color:white;
-  background-color: #BBDDF2;
-  margin: 2.0em 1.0em 2.0em;
-  padding:1.5em;
+h1 {
+  color:black;
+  background-color: #D2A2F2;
+  display:flex;
+  justify-content: center;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .container {
   max-width: 960px;
   margin: 0 auto;
 }
-header {
-  background-color:#BBDDF2;
-  padding: 0 1.0em;
-}
-h2{
-font-size: 25px;
-padding:0.5em;
-}
 
 
-h3{
-  font-size: 25px;
+h2 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
   padding:0.5em;
 }
 
-p{
-  font-size:20px;
-  padding:0.5em;
+p {
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+a{
   display:flex;
-  flex-direction: wrap;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
 }
-
-
-
-header h1,
-.container {
-    /* should stretch up to 800px wide and center on the screen */
-width:auto;
-text-align: center;
-margin:0 auto;
-padding:1.5em;
-*/background-color:pink;*/
-}
-
-
 
 nav {
   position: fixed;
   top: 0.5rem;
   left: 0.5rem;
+  z-index: 1000;
 }
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -105,93 +91,57 @@ nav ul {
   flex-direction: column;
   gap: 1.0rem;
 }
+
 nav li {
   list-style-type: none;
   padding: 0.5em;
 }
+
 .toggle:hover {
   color: #B78DF2;
   cursor: pointer;
 }
+
 .item {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.3s linear;
+  position: relative;
+  z-index: 1001;
 }
+
 .item a:hover {
-  color:#B78DF2;
+  color: #B78DF2;
 }
+
 .item a {
-  color:white;
-  font-size: 36px;
+  color: black;
+  font-size: 20px;
   text-decoration: none;
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 0.5rem 1.0rem;
+  cursor: pointer;
 }
+
 .show {
   visibility: visible;
   opacity: 1;
 }
 
-
-#home {
-
-
+.item.show {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-#contact{
-  background-color: #BBDDF2;
+
+#home .carousel-inner img {
+  width:50%;
+  height: auto;
+  margin: 0 auto;
+  background-color: black;
 }
-
-#gallery{
-  background-color: #EFD5F2;
-
-}
-
-#prices{
-background-color:#D2A2F2 ;
-
-.table-2 {
-
-}
-
-.table-2 td, .table-2 th {
-  font-family: Trebuchet, Helvetica, sans-serif;
-}
-
-.table-2 th {
-    table-layout: fixed;
-    width: 40%;
-    border-collapse: collapse;
-    border: 2px solid white;
-}
-
-.table-2 td {
-    table-layout: fixed;
-    width: 40%;
-    border-collapse: collapse;
-    border: 2px solid white;
-}
-.table-2 td{
-    background-color: beige;
-}
-.table-2 th{
-    background-color:green;
-    color:white;
-    
-
-}
-
-#about{
-background-color: #B78DF2;
-}
-
-.carouselExampleIndicators{
-  max-width: 500px;
-  margin:0 auto;
-}
-
 
 
 /* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
@@ -199,24 +149,22 @@ background-color: #B78DF2;
 No media query for `xs` since this is the default */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-
+@media (min-width: 576px) {
+  p {
+    display: flex;
+    flex-direction: wrap;
+    padding:1.0em;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-
-}
+@media (min-width: 768px) {}
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-
-}
+@media (min-width: 992px) {}
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}
 
 
 /* MEDIA QUERIES FROM LARGEST TO SMALLEST */

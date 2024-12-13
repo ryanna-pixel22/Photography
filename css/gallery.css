@@ -1,0 +1,58 @@
+body{
+    background-color: #D2A2F2;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.jason{
+    width:35%;
+    margin:0.5em;
+    display:flex;
+    flex-direction:row;
+}
+
+img{
+    width:70%;
+}
+.aaron{
+    width:35%;
+    margin:0.5em;
+    display:flex;
+    flex-direction:row;
+}
+.aniya{
+    width:35%;
+    margin:0.5em;
+    display:flex;
+    flex-direction:row;
+}
+.nesha{
+    width:35%;
+    margin:0.5em;
+    display:flex;
+    flex-direction:row;
+}
+
+.gassi{
+    width:35%;
+    margin:0.5em;
+    display:flex;
+    flex-direction:row;
+}
+
+.bme{
+    width:35%;
+    margin:0.5em;
+    display:flex;
+    flex-direction:row;
+}
+
+.duo{
+    width:35%;
+    margin:0.5em;
+    display:flex;
+    flex-direction:row;
+}

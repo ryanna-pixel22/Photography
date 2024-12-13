@@ -1,0 +1,43 @@
+body{
+    font-family:"Playfair Display", serif;
+      font-optical-sizing: auto;
+      font-weight:800;
+      font-style: normal;
+      font-size: 800;
+      background:white;
+}
+#intro{
+    font-size: 800;
+}
+footer{
+    padding:2.0em;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+    background:#6DBFF2;
+}
+
+.links{
+    display:flex;
+    flex-flow: row wrap;
+} 
+.about{
+padding:0.5em;
+}
+
+a:link, a:visited {
+    color:#BBDDF2;
+    text-decoration: none;
+  }
+  a:active, a:hover {
+    color:white;
+  }
+
+  .contacts {
+    margin: 1.0em 0;
+  }
+
+  .icons {
+    padding: 0.5em;
+  }
+  
