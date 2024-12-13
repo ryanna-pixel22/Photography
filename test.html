@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="test.css">
+<!--Font Awesome -->
+<script src="https://kit.fontawesome.com/c55ed3d8da.js" crossorigin="anonymous"></script>
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+
+<h1>rycapturedit</h1>
+
+<nav>
+    <ul>
+        <li class="toggle"><i class="fa-solid fa-camera"></i></li>
+        <li class="item"><a href="index.html">Home</a></li>
+        <li class="item"><a href="about.html">About Me</a></li>
+        <li class="item"><a href="gallery.html">Gallery</a></li>
+        <li class="item"><a href="contact.html">Contact</a></li>
+        <li class="item"><a href="prices.html">Prices</a></li>
+    </ul>
+</nav>
+
+    </header>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.querySelector('.toggle');
+            const menu = document.querySelector('nav ul');
+    
+            toggleButton.addEventListener('click', () => {
+                menu.classList.toggle('show');
+            });
+        });
+    </script>
+     <script>
+        function toggleDropdown() {
+            document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
+        }
+        document.querySelector('.toggle').addEventListener('click', toggleDropdown);
+    </script>
+
+</body>
+</html>

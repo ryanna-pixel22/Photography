@@ -7,15 +7,41 @@
     <title>About Me</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/about.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/global.css"> -->
 
     <!--Font awesome -->
     <script src="https://kit.fontawesome.com/c55ed3d8da.js" crossorigin="anonymous"></script>
 
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
+<!-- Header Inclusion Script -->
+<script>
+    function includeHeader() {
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');}
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching the header:', error);
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', includeHeader);
+    </script>
     
 </head>
 
 <body>
+    <div id="header-placeholder"></div>
+    
     <h1>I'm glad you're here</h1>
     <img class="about-image" src="images/Ryanna/IMG_4024.JPG" alt="Ryanna">
 <section>
