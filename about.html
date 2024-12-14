@@ -42,6 +42,25 @@
 
     document.addEventListener('DOMContentLoaded', includeHeader);
 </script>
+
+<!-- Footer Inclusion Script -->
+<script>
+    function includeFooter() {
+        fetch('footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error fetching the footer:', error);
+            });
+    }
+
+    document.addEventListener('DOMContentLoaded', includeFooter);
+</script>
     
 </head>
 
@@ -62,7 +81,7 @@
     </section>
     <p class="farewell">I would be honored to take photos for you, your special day, or anything in between!</p>
 
-
+    <div id="footer-placeholder"></div>
 </body>
 
 </html>
