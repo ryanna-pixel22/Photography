@@ -6,7 +6,7 @@
     <title>Gallery</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/gallery.css">
-    <!--link rel="stylesheet" type="text/css" href="css/global.css"-->
+    <link rel="stylesheet" type="text/css" href="css/global.css">
 
      <!--Google Fonts-->
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,20 +20,26 @@
     function includeHeader() {
         fetch('header.html')
             .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');}
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('header-placeholder').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('Error fetching the header:', error);
-                });
-        }
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                const toggleButton = document.querySelector('.toggle');
+                const menu = document.querySelector('nav ul');
 
-        document.addEventListener('DOMContentLoaded', includeHeader);
-    </script>
+                toggleButton.addEventListener('click', () => {
+                    menu.classList.toggle('show');
+                    document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching the header:', error);
+            });
+    }
+
+    document.addEventListener('DOMContentLoaded', includeHeader);
+</script>
 
 </head>
 <body>

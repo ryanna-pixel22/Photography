@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/prices.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/contact.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/global.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
 
 <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,22 +21,28 @@
      crossorigin=""/>
 
      <!-- Header Inclusion Script -->
-   <script>
-    function includeHeader() {
-        fetch('header.html')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');}
+     <script>
+        function includeHeader() {
+            fetch('header.html')
+                .then(response => {
+                    if (!response.ok) throw new Error('Network response was not ok');
                     return response.text();
                 })
                 .then(data => {
                     document.getElementById('header-placeholder').innerHTML = data;
+                    const toggleButton = document.querySelector('.toggle');
+                    const menu = document.querySelector('nav ul');
+    
+                    toggleButton.addEventListener('click', () => {
+                        menu.classList.toggle('show');
+                        document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
+                    });
                 })
                 .catch(error => {
                     console.error('Error fetching the header:', error);
                 });
         }
-
+    
         document.addEventListener('DOMContentLoaded', includeHeader);
     </script>
 </head>

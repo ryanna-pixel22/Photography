@@ -1,4 +1,5 @@
   <!--Lesson 18 Mobile Nav-->
+
 <header class="siteheader">
     <h1 class="sitetitle">rycapturedit</h1>
     <nav class="sitenav">
@@ -11,21 +12,21 @@
             <li class="item"><a href="prices.html">Prices</a></li>
         </ul>
     </nav>
-</header>
-    <!--Nav js-->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleButton = document.querySelector('.toggle');
-            const menu = document.querySelector('nav ul');
+
+    <!-- <header> 
+        <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <h1>ryacapturedit</h1>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="prices.html">Prices</a></li>
+               
+            </ul>
+        </nav>
+        </div>
+    </header>
+ </header> -->
     
-            toggleButton.addEventListener('click', () => {
-                menu.classList.toggle('show');
-            });
-        });
-    </script>
-     <script>
-        function toggleDropdown() {
-            document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
-        }
-        document.querySelector('.toggle').addEventListener('click', toggleDropdown);
-    </script>
