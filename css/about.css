@@ -31,19 +31,21 @@ body{
 
   p{
     padding:1.0em;
-    display: flex;
-  justify-content: end;
     font-family: "Playfair Display", serif;
       font-optical-sizing: auto;
-      font-weight:500;
-      font-size: 20px;
+      font-weight:400;
+      font-size: 15px;
       font-style: normal;
   }
 
   .farewell{
     font-family: "Playfair Display", serif;
       font-optical-sizing: auto;
-      font-weight:500;
+      font-weight:400;
       font-style: normal;
     padding:1.0em;
+  }
+  .section{
+display:flex;
+align-items: end;
   }

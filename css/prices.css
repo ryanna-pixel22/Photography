@@ -13,7 +13,6 @@ h1{
     justify-content: center;
     background-color:#EFD5F2;
     padding:0.5em;
-    border-radius:45%;
     font-family: "Playfair Display", serif;
     font-optical-sizing:auto;
     font-weight:700;
@@ -29,18 +28,15 @@ h3{
     font-style :normal;
 }
 
-.top{
-    background-color: aliceblue;
+.accordion-body{
+  background-color: aliceblue;
 }
-
-.middle{
-    background-color: aliceblue; 
+.accordion-button{
+  background-color:#BBDDF2;
 }
-
-.bottom{
-    background-color: aliceblue;
+.accordion-flush{
+  background-color: black;
 }
-
 ul{
     font-size:16px;
 }
