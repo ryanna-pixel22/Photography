@@ -1,114 +1,366 @@
-.siteheader {
-    height:500;
-    display:flex;
-    justify-content: center;
+/* This is my global CSS that holds all of the style requests for 
+both my Header and Footer that is found on all of my pages.*/
+
+/* -----------------------------
+  1. Box Sizing and Reset
+------------------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.siteheadertitle{
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #D2A2F2;
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight:400;
-  font-style:italic;
-height: 1000;
-background-color: aliceblue;
-width:2000px;
+  color: #333;
+  line-height: 1.6;
 }
 
-.sitenav{
-    position: fixed;
-    top: 0.5rem;
-    left: 0.5rem;
-    z-index: 99999;
-  }
-  
-  .navcontent{
-    margin: 0;
-    padding: 0;
-    /* optional but good for control */
-    display: flex;
-    flex-direction: column;
-    gap: 1.0rem;
-  }
+/* -----------------------------
+ 2. Header Styling
+------------------------------ */
+.siteheader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 1em 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-nav li {
-  list-style-type: none;
-  padding: 0.5em;
+.siteheadertitle {
+  font-weight: 400;
+  font-style: italic;
+  margin: 0.5em 0;
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+}
+
+.pagetitle {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8em;
+  color: #333;
+  margin: 0.3em 0 1em 0;
+  text-align: center;
+}
+
+/* -----------------------------
+ 3. Navigation Styling
+------------------------------ */
+.sitenav {
+  width: 100%;
+}
+
+.navcontent {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.toggle {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #333;
 }
 
 .toggle:hover {
   color: #B78DF2;
-  cursor: pointer;
 }
 
 .item {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.3s linear;
-}
-
-.item a:hover {
-  color: #B78DF2;
+  display: none;
 }
 
 .item a {
   color: black;
-  font-size: 20px;
+  font-size: 1.2em;
   text-decoration: none;
-  display: inline-block;
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 0.5rem 1.0rem;
-  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.show {
-  visibility: visible;
-  opacity: 1;
+.item a:hover {
+  color: #B78DF2;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-nav ul.show .item {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
+.navcontent.show .item {
+  display: block;
+  background-color: #6DBFF2;
+}
+
+
+/* -----------------------------
+ 4. Responsive Navigation
+------------------------------ */
+@media (min-width: 600px) {
+  .navcontent {
+      flex-direction: row;
+      justify-content: center;
   }
-  .container{
-    max-width:700px;
-    margin:0 auto;
-    display:flex;
-    flex-direction:column;
+
+  .item {
+      display: block;
   }
 
-.sitefooter{
-    padding:1.0em;
-    background:#6DBFF2;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-between;
+  .toggle {
+      display: none;
+  }
 }
 
+/* -----------------------------
+ 5. Page Content Styling
+------------------------------ */
 
-.sitefootertitle{
-    font-size: 800;
+section {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.footerlinks{
-    display:flex;
-    flex-flow: row wrap;
+.about-image {
+  width: 45%;
+  margin: 0.5em auto;
+  border-radius: 50%;
+  display: block;
+}
+
+.farewell {
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+}
+
+/* -----------------------------
+ 6. Accordion Styling (Prices Page)
+------------------------------ */
+.accordion-flush {
+  background-color: black;
+}
+
+.accordion-button {
+  background-color: #BBDDF2;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.accordion-button.collapsed {
+  background-color: #BBDDF2;
+  color: #333;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-collapse {
+  background-color: aliceblue;
+}
+
+.accordion-body ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  font-size: 1em;
+}
+
+.accordion-body li {
+  margin-bottom: 0.5em;
+}
+
+/* -----------------------------
+ 7. Table Styling (Prices Page)
+------------------------------ */
+.table-2 {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 2em auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-2 th,
+.table-2 td {
+  padding: 1em;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.table-2 th {
+  background-color: #BBDDF2;
+  color: #333;
+  font-weight: 600;
+}
+
+.table-2 td {
+  background-color: aliceblue;
+  font-weight: 400;
+}
+
+/* -----------------------------
+ 8. Footer Styling
+------------------------------ */
+.sitefooter {
+  padding: 1em;
+  background: #6DBFF2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sitefootertitle {
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+.footerlinks {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
 }
 
 .footericons {
-    padding: 0.5em;
-    size: 100;
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+
+.footercontacts {
+  margin: 1em 0;
+}
+
+/* -----------------------------
+ 9. Link Styling
+------------------------------ */
+a:link,
+a:visited {
+  color: #BBDDF2;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: white;
+}
+
+/* -----------------------------
+ 10. Additional Utility Classes
+------------------------------ */
+
+.centered-heading {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background-color: #B78DF2;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #A36CE0;
+}
+
+/* Responsive Image */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Utility Margin and Padding */
+.mt-1 { margin-top: 1em; }
+.mt-2 { margin-top: 2em; }
+.mb-1 { margin-bottom: 1em; }
+.mb-2 { margin-bottom: 2em; }
+.pt-1 { padding-top: 1em; }
+.pb-1 { padding-bottom: 1em; }
+
+/* -----------------------------
+ 11. Media Queries for Responsiveness
+------------------------------ */
+
+/* Tablets and above */
+@media (min-width: 768px) {
+  .about-image {
+      width: 30%;
+      float: left;
+      margin-right: 2em;
   }
 
-  .footercontacts {
-    margin: 1.0em 0;
+  .about-content {
+      overflow: hidden;
   }
 
-a:link, a:visited {
-    color:#BBDDF2;
-    text-decoration: none;
-  }
-  a:active, a:hover {
-    color:white;
+  .accordion-flush {
+      margin: 2em 0;
   }
 
+  .table-2 {
+      width: 70%;
+  }
+}
+
+/* Desktops and above */
+@media (min-width: 1024px) {
+  .siteheader {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1em 2em;
+  }
+
+  .siteheadertitle {
+      font-size: 3em;
+  }
+
+  .pagetitle {
+      font-size: 2em;
+  }
+
+  .sitenav {
+      display: flex;
+      align-items: center;
+  }
+
+  .navcontent {
+      flex-direction: row;
+  }
+
+  .item {
+      display: block !important;
+  }
+
+  .toggle {
+      display: none;
+  }
+
+  .sitefooter {
+      padding: 2em;
+  }
+
+  .footerlinks {
+      gap: 2em;
+  }
+}

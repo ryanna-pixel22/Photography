@@ -1,127 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/contact.css">
-    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <!--This Contact page withholds all my personal information to allow potential clients 
+        interested to contact me about future photography sessions.-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/contact.css">
+        <link rel="stylesheet" type="text/css" href="css/global.css">
 
-<!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-<!--Font Awesome -->
-<script src="https://kit.fontawesome.com/c55ed3d8da.js" crossorigin="anonymous"></script>
-<!--Leafletjs-->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+        <!--Font Awesome -->
+        <script src="https://kit.fontawesome.com/c55ed3d8da.js" crossorigin="anonymous"></script>
+        <!--Leafletjs-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
 
-     <!-- Header Inclusion Script -->
-     <script>
-        function includeHeader() {
-            fetch('header.html')
-                .then(response => {
-                    if (!response.ok) throw new Error('Network response was not ok');
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('header-placeholder').innerHTML = data;
-                    const toggleButton = document.querySelector('.toggle');
-                    const menu = document.querySelector('nav ul');
-    
-                    toggleButton.addEventListener('click', () => {
-                        menu.classList.toggle('show');
-                        document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
+        <!-- Header Inclusion Script -->
+        <script>
+            function includeHeader() {
+                fetch('header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById('header-placeholder').innerHTML = data;
+                        
+                        const toggleButton = document.querySelector('.toggle');
+                        const navMenu = document.getElementById('nav-menu');
+                        
+                        if (toggleButton && navMenu) {
+                            toggleButton.addEventListener('click', () => {
+                                navMenu.classList.toggle('show');
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching the header:', error);
                     });
-                })
-                .catch(error => {
-                    console.error('Error fetching the header:', error);
-                });
-        }
-    
-        document.addEventListener('DOMContentLoaded', includeHeader);
-    </script>
+            }
 
-    <!-- Footer Inclusion Script -->
- <script>
-    function includeFooter() {
-        fetch('footer.html')
-            .then(response => {
-                if (!response.ok) throw new Error('Network response was not ok');
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error fetching the footer:', error);
-            });
-    }
+            document.addEventListener('DOMContentLoaded', includeHeader);
+        </script>
 
-    document.addEventListener('DOMContentLoaded', includeFooter);
-</script>
+        <!-- Footer Inclusion Script -->
+        <script>
+            function includeFooter() {
+                fetch('footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById('footer-placeholder').innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching the footer:', error);
+                    });
+            }
 
-</head>
-<body>
-    <div id="header-placeholder"></div>
-    
-    <h1>Contact</h1>
-<section>
-<a href="#email" class="icon"></a>
-    <i class="fa-solid fa-envelope"></i>
-    <div>
-    <h3>Email</h3>
-    <p>ryanna.22@icloud</p>
-</div>
-</section>
+            document.addEventListener('DOMContentLoaded', includeFooter);
+        </script>
 
-<section>
-<a href="#phone" class="icon"></a>
-    <i class="fa-solid fa-phone"></i>
-    <div>
-    <h3>Phone</h3>
-    <p>317-652-7349</p>
-</div>
-</section>
+    </head>
+    <body>
+        <div id="header-placeholder"></div>
+        <h1 class="contacttitle">Contact</h1>
+        <section>
+        <a href="#email" class="icon"></a>
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+            <h3 class="socials">Email</h3>
+            <p>ryanna.22@icloud</p>
+        </div>
+        </section>
 
-<section>
-<a href="https://www.instagram.com/rycapturedit/profilecard/?igsh=MTVwZW1xMWg3eXFodQ==" class="icon"></a>
-    <i class="fa-brands fa-square-instagram"></i>
-    <div>
-    <h3>Instagram</h3>
-    <p>ryacapturedit</p>
-</div>
-</section>
+        <section>
+        <a href="#phone" class="icon"></a>
+            <i class="fa-solid fa-phone"></i>
+            <div>
+            <h3 class="socials">Phone</h3>
+            <p>317-652-7349</p>
+        </div>
+        </section>
 
-<div id="map">
-var map = L.map('map').setView([51.505, -0.09], 13);
-</div>
- <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-     <script>
-        var map = L.map('map').setView([39.168643711940966, -86.52163405251463], 16);
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-     </script>
+        <section>
+        <a href="https://www.instagram.com/rycapturedit/profilecard/?igsh=MTVwZW1xMWg3eXFodQ==" class="icon"></a>
+            <i class="fa-brands fa-square-instagram"></i>
+            <div>
+            <h3 class="socials">Instagram</h3>
+            <p>ryacapturedit</p>
+        </div>
+        </section>
+
+        <div id="map">
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        </div>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <script>
+            var map = L.map('map').setView([39.168643711940966, -86.52163405251463], 16);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+        </script>
 
 
-<!--Navgation-->
-<script>
-    function toggleDropdown() {
-        document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
-    }
-    document.querySelector('.toggle').addEventListener('click', toggleDropdown);
-</script>
+    <!--Navgation-->
+        <script>
+            function toggleDropdown() {
+                document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
+            }
+            document.querySelector('.toggle').addEventListener('click', toggleDropdown);
+        </script>
 
-  <div id="footer-placeholder"></div>
+    <div id="footer-placeholder"></div>
 
-</body> 
+    </body> 
 </html> 

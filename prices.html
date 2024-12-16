@@ -1,153 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prices</title>
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/prices.css">
-    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <!--This is the prices page to give my potential clients an insight into
+         my different photography sessions and the charge for each one.  -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery</title>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/prices.css">
+        <link rel="stylesheet" type="text/css" href="css/global.css">
 
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<!--Font awesome -->
-<script src="https://kit.fontawesome.com/c55ed3d8da.js" crossorigin="anonymous"></script>
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <!---font awesome -->
+        <script src="https://kit.fontawesome.com/c55ed3d8da.js" crossorigin="anonymous"></script>
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Header Inclusion Script -->
+        <script>
+            function includeHeader() {
+                fetch('header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById('header-placeholder').innerHTML = data;
+                        
+                        const toggleButton = document.querySelector('.toggle');
+                        const navMenu = document.getElementById('nav-menu');
+                        
+                        if (toggleButton && navMenu) {
+                            toggleButton.addEventListener('click', () => {
+                                navMenu.classList.toggle('show');
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching the header:', error);
+                    });
+            }
 
-<!-- Header Inclusion Script -->
-<script>
-    function includeHeader() {
-        fetch('header.html')
-            .then(response => {
-                if (!response.ok) throw new Error('Network response was not ok');
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('header-placeholder').innerHTML = data;
-                const toggleButton = document.querySelector('.toggle');
-                const menu = document.querySelector('nav ul');
+            document.addEventListener('DOMContentLoaded', includeHeader);
+        </script>
 
-                toggleButton.addEventListener('click', () => {
-                    menu.classList.toggle('show');
-                    document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching the header:', error);
-            });
-    }
+        <!-- Footer Inclusion Script -->
+        <script>
+            function includeFooter() {
+                fetch('footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        return response.text();
+                    })
+                    .then(data => {
+                        document.getElementById('footer-placeholder').innerHTML = data;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching the footer:', error);
+                    });
+            }
 
-    document.addEventListener('DOMContentLoaded', includeHeader);
-</script>
+            document.addEventListener('DOMContentLoaded', includeFooter);
+        </script>
+    </head>
 
-<!-- Footer Inclusion Script -->
-<script>
-    function includeFooter() {
-        fetch('footer.html')
-            .then(response => {
-                if (!response.ok) throw new Error('Network response was not ok');
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Error fetching the footer:', error);
-            });
-    }
+    <body>
+        <div id="header-placeholder"></div>
+        <h1 class="pricetitles">Booking a Photography Sessions</h1>
 
-    document.addEventListener('DOMContentLoaded', includeFooter);
-</script>
-
-
-</head>
-<body>
-    <div id="header-placeholder"></div>
-<h1>Booking a Photography Sessions</h1>
-
-    <table class="table-2">
-        <tr>
-            <th>Sesssion A </th>
-            <td>$15</td>
-        </tr>
-        <tr>
-            <th>Session B</th>
-            <td>$25</td>
-        </tr>
-        <tr>
-            <th>Session C</th>
-            <td>$50</td>
-        </tr>
-    </table>
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Session A
-            </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body"> 
-            <ul>
-                <li>This session includes 30 minutes of coverage</li>
-                <li>15-25 photos</li>
-                <li>Unedited Colored photos</li>
-                <li>Digital Access to Images</li>
-                <li>1 outfit</li>
-            </ul>
-        </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              Session B
-            </button>
-          </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
+        <table class="table-2">
+            <tr>
+                <th>Sesssion A </th>
+                <td>$15</td>
+            </tr>
+            <tr>
+                <th>Session B</th>
+                <td>$25</td>
+            </tr>
+            <tr>
+                <th>Session C</th>
+                <td>$50</td>
+            </tr>
+        </table>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Session A
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"> 
                 <ul>
-                    <li>This session includes 45 minutes of coverage</li>
-                    <li> 30-40 photos</li>
-                    <li>Edited Colored photos</li>
+                    <li>This session includes 30 minutes of coverage</li>
+                    <li>15-25 photos</li>
+                    <li>Unedited Colored photos</li>
                     <li>Digital Access to Images</li>
-                    <li> 2 outfit</li>
+                    <li>1 outfit</li>
                 </ul>
             </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                Session C
-            </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-                <ul>
-                    <li>This session includes 1 hour of coverage</li>
-                    <li>60-80 photos</li>
-                    <li>Edited Colored photos</li>
-                    <li>Digital Access to Images</li>
-                    <li>3 outfit</li>
-                </ul>
             </div>
-          </div>
+            </div>
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Session B
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>This session includes 45 minutes of coverage</li>
+                        <li> 30-40 photos</li>
+                        <li>Edited Colored photos</li>
+                        <li>Digital Access to Images</li>
+                        <li> 2 outfit</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Session C
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>This session includes 1 hour of coverage</li>
+                        <li>60-80 photos</li>
+                        <li>Edited Colored photos</li>
+                        <li>Digital Access to Images</li>
+                        <li>3 outfit</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
         </div>
-      </div>
 
-
-<!--Navgation-->
-    <script>
-        function toggleDropdown() {
-            document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
-        }
-        document.querySelector('.toggle').addEventListener('click', toggleDropdown);
-    </script>
-
-
-<div id="footer-placeholder"></div>
-</body>
+        <div id="footer-placeholder"></div>
+    </body>
 
 </html>

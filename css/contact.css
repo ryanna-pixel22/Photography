@@ -1,7 +1,8 @@
+/*This is the CSS page connected to my Contact.HTML*/
 body{
     background-color: #BBDDF2;
 }
-h1{
+.contacttitle{
       font-family: "Playfair Display", serif;
       font-optical-sizing: auto;
       font-weight: 700;
@@ -10,7 +11,7 @@ h1{
       justify-content: center;
 
 }
-h3{
+.socials{
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 500;

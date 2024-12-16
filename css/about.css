@@ -1,19 +1,11 @@
-
-
+/*This is the CSS page connected to my About.HTML*/
 body{
     background: rgb(239,213,242);
     background: radial-gradient(circle, rgba(239,213,242,1) 16%, rgba(210,162,242,1) 30%, rgba(183,141,242,1) 49%, rgba(109,191,242,1) 69%, rgba(187,221,242,1) 86%);
 }
 
-.about-image{
-    width:45%;
-    margin:0.5em;
-    display:flex;
-    justify-content:end;
-    border-radius:50%;
-  }
 
-  h1{
+  .abouttitle{
     display:flex;
     justify-content: center;
     font-family: "Playfair Display", serif;
@@ -45,7 +37,15 @@ body{
       font-style: normal;
     padding:1.0em;
   }
-  .section{
-display:flex;
-align-items: end;
+  .about-image{
+    width:45%;
+    margin:0.5em;
+    display:flex;
+    justify-content:end;
+    border-radius:50%;
+  }
+  .about-section{
+   display:flex;
+    align-items:center;
+    justify-content: space-between;
   }

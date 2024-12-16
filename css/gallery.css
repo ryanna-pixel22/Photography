@@ -1,8 +1,9 @@
+/*This is the CSS page connected to my Gallery.HTML*/
 body{
     background-color: #D2A2F2;
 }
 
-h1{
+.gallerytitle{
     display: flex;
     justify-content: center;
 }

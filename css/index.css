@@ -1,3 +1,6 @@
+
+/*This is the CSS page connected to my (Homepage) Index.HTML*/
+
 /* natural box model */
 html {
   box-sizing: border-box;
@@ -39,7 +42,7 @@ body {
     z-index: 1;
 }
 
-h1 {
+/* h1{ 
   color:black;
   background-color: #D2A2F2;
   display:flex;
@@ -48,21 +51,20 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: italic;
-}
+}*/
 
 .container {
   max-width: 960px;
   margin: 0 auto;
 }
 
-
-h2 {
+.homeaboutme {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-size: 15px;
-  padding:0.5em;
+  padding:1.5em;
 }
 
 p {
