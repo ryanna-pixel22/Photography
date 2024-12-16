@@ -1,4 +1,3 @@
-
 /*This is the CSS page connected to my (Homepage) Index.HTML*/
 
 /* natural box model */
@@ -36,10 +35,10 @@ html {
 body {
   margin: 0;
   /*https://cssgradient.io*/
-    background: rgb(239, 213, 242);
-    background: radial-gradient(circle, rgba(239, 213, 242, 1) 16%, rgba(210, 162, 242, 1) 30%, rgba(183, 141, 242, 1) 49%, rgba(109, 191, 242, 1) 69%, rgba(187, 221, 242, 1) 86%);
-    position: relative;
-    z-index: 1;
+  background: rgb(239, 213, 242);
+  background: radial-gradient(circle, rgba(239, 213, 242, 1) 16%, rgba(210, 162, 242, 1) 30%, rgba(183, 141, 242, 1) 49%, rgba(109, 191, 242, 1) 69%, rgba(187, 221, 242, 1) 86%);
+  position: relative;
+  z-index: 1;
 }
 
 /* h1{ 

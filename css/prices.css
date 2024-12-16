@@ -1,31 +1,31 @@
 /*This is the CSS page connected to my Prices.HTML*/
 body{
-    background-color:#D2A2F2;
+  background-color:#D2A2F2;
 }
 
 .sessions{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .pricetitle{
-    display: flex;
-    justify-content: center;
-    background-color:#EFD5F2;
-    padding:0.5em;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing:auto;
-    font-weight:500;
-    font-style :italic;
+  display: flex;
+  justify-content: center;
+  background-color:#EFD5F2;
+  padding:0.5em;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing:auto;
+  font-weight:500;
+  font-style :italic;
 }
 
 h3{
-    background-color:#EFD5F2;
-    padding:1.5em;
-    font-family: "Playfair Display", serif;
-    font-optical-sizing:auto;
-    font-weight:600;
-    font-style :normal;
+  background-color:#EFD5F2;
+  padding:1.5em;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing:auto;
+  font-weight:600;
+  font-style :normal;
 }
 
 .accordion-body{
@@ -57,32 +57,30 @@ li{
     margin: 0 auto;
 }
 
-    .table-2 td,
-    .table-2 th {
-        font-family: "Playfair Display", serif;
-    }
+.table-2 td,
+.table-2 th {
+  font-family: "Playfair Display", serif;
+ }
     
-    .table-2 th {
-      table-layout: fixed;
-      width: 90%;
-      border-collapse: collapse;
-      border: 2px solid white;
-    }
+.table-2 th {
+  table-layout: fixed;
+  width: 90%;
+  border-collapse: collapse;
+  border: 2px solid white;
+}
     
-    .table-2 td {
-      table-layout: fixed;
-      width: 90%;
-      border-collapse: collapse;
-      border: 2px solid white;
-    }
+.table-2 td {
+  table-layout: fixed;
+  width: 90%;
+  border-collapse: collapse;
+  border: 2px solid white;
+}
     
-    .table-2 td {
-      background-color:aliceblue;
-    }
+.table-2 td {
+  background-color:aliceblue;
+}
     
-    .table-2 th {
-      background-color:#BBDDF2;
-      color: black;
-    
-    
-    }
+.table-2 th {
+  background-color:#BBDDF2;
+  color: black;
+}

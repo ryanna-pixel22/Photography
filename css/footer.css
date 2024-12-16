@@ -1,44 +1,45 @@
 /*This is the CSS page connected to my Footer.HTML*/
 body{
-    font-family:"Playfair Display", serif;
-      font-optical-sizing: auto;
-      font-weight:800;
-      font-style: normal;
-      font-size: 800;
-      background:white;
+  font-family:"Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight:800;
+  font-style: normal;
+  font-size: 800;
+  background:white;
 }
 h2{
-    font-size: 800;
+  font-size: 800;
 }
 footer{
-    padding:2.0em;
-    display:flex;
-    flex-flow:row wrap;
-    justify-content:space-between;
-    background:#6DBFF2;
+  padding:2.0em;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+  background:#6DBFF2;
 }
 
 .links{
-    display:flex;
-    flex-flow: row wrap;
+  display:flex;
+  flex-flow: row wrap;
 } 
+
 .about{
 padding:0.5em;
 }
 
 a:link, a:visited {
-    color:#BBDDF2;
-    text-decoration: none;
-  }
-  a:active, a:hover {
-    color:white;
-  }
+  color:#BBDDF2;
+  text-decoration: none;
+}
+a:active, a:hover {
+  color:white;
+}
 
-  .contacts {
-    margin: 1.0em 0;
-  }
+.contacts {
+  margin: 1.0em 0;
+}
 
-  .icons {
-    padding: 0.5em;
-  }
+.icons {
+  padding: 0.5em;
+}
   

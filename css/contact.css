@@ -3,12 +3,12 @@ body{
     background-color: #BBDDF2;
 }
 .contacttitle{
-      font-family: "Playfair Display", serif;
-      font-optical-sizing: auto;
-      font-weight: 700;
-      font-style:italic;
-      display: flex;
-      justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style:italic;
+    display: flex;
+    justify-content: center;
 
 }
 .socials{

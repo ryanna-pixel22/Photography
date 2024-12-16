@@ -1,10 +1,10 @@
+<!--
+I360 Web Design Template (Given From Class)
+This is the homepage of my website, which provides a glimpse
+    of my overall website and is interactive for my audience. 
+-->
 <!DOCTYPE html>
 <html lang="en">
-    <!--
-    I360 Web Design Template (Given From Class)
-    This is the homepage of my website, which provides a glimpse
-     of my overall website and is interactive for my audience. 
-    -->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +32,7 @@
     <!-- Header Inclusion Script -->
         <script>
             function includeHeader() {
-                fetch('header.html')
+                fetch('components/header.html')
                     .then(response => {
                         if (!response.ok) throw new Error('Network response was not ok');
                         return response.text();
@@ -60,7 +60,7 @@
         <!-- Footer Inclusion Script -->
         <script>
             function includeFooter() {
-                fetch('footer.html')
+                fetch('components/footer.html')
                     .then(response => {
                         if (!response.ok) throw new Error('Network response was not ok');
                         return response.text();

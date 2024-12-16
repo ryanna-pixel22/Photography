@@ -1,59 +1,69 @@
 /*This is the CSS page connected to my Gallery.HTML*/
-body{
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     background-color: #D2A2F2;
+    font-family: 'Playfair Display', serif;
+    padding: 1em;
 }
 
-.gallerytitle{
-    display: flex;
-    justify-content: center;
+/* Center the main heading */
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
 }
 
-.jason{
-    width:35%;
-    margin:0.5em;
-    display:flex;
-    flex-direction:row;
+/* Gallery Container Styling */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+    padding: 1em;
 }
 
-img{
-    width:70%;
-}
-.aaron{
-    width:35%;
-    margin:0.5em;
-    display:flex;
-    flex-direction:row;
-}
-.aniya{
-    width:35%;
-    margin:0.5em;
-    display:flex;
-    flex-direction:row;
-}
-.nesha{
-    width:35%;
-    margin:0.5em;
-    display:flex;
-    flex-direction:row;
+/* Individual Gallery Item */
+.gallery-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.gassi{
-    width:35%;
-    margin:0.5em;
-    display:flex;
-    flex-direction:row;
+.gallery-item:hover {
+    transform: scale(1.05);
 }
 
-.bme{
-    width:35%;
-    margin:0.5em;
-    display:flex;
-    flex-direction:row;
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
-.duo{
-    width:35%;
-    margin:0.5em;
-    display:flex;
-    flex-direction:row;
+/* Optional: Caption Styling */
+.gallery-item figcaption {
+    padding: 0.5em;
+    text-align: center;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 }

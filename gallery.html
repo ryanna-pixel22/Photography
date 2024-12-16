@@ -1,137 +1,210 @@
+<!--This Gallery Page allows me to 
+showcase my previous work to potential clients.-->
+<!-- gallery.html -->
 <!DOCTYPE html>
 <html lang="en">
-    <!--This Gallery Page allows me to 
-        showcase my previous work to potential clients.-->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gallery</title>
-        <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="css/gallery.css">
-        <link rel="stylesheet" type="text/css" href="css/global.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/gallery.css">
 
-        <!--Google Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <!---font awesome -->
-        <script src="https://kit.fontawesome.com/c55ed3d8da.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
+        rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c55ed3d8da.js" crossorigin="anonymous"></script>
+		
+		<!--Javascript -->
+		<script src="javascript/include.js"></script>
+</head>
+<body>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <!-- Main Heading -->
+    <h1>My Gallery</h1>
 
-        <!-- Header Inclusion Script -->
-        <script>
-            function includeHeader() {
-                fetch('header.html')
-                    .then(response => {
-                        if (!response.ok) throw new Error('Network response was not ok');
-                        return response.text();
-                    })
-                    .then(data => {
-                        document.getElementById('header-placeholder').innerHTML = data;
-                        
-                        const toggleButton = document.querySelector('.toggle');
-                        const navMenu = document.getElementById('nav-menu');
-                        
-                        if (toggleButton && navMenu) {
-                            toggleButton.addEventListener('click', () => {
-                                navMenu.classList.toggle('show');
-                            });
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error fetching the header:', error);
-                    });
-            }
-
-            document.addEventListener('DOMContentLoaded', includeHeader);
-        </script>
-
-        <!-- Footer Inclusion Script -->
-        <script>
-            function includeFooter() {
-                fetch('footer.html')
-                    .then(response => {
-                        if (!response.ok) throw new Error('Network response was not ok');
-                        return response.text();
-                    })
-                    .then(data => {
-                        document.getElementById('footer-placeholder').innerHTML = data;
-                    })
-                    .catch(error => {
-                        console.error('Error fetching the footer:', error);
-                    });
-            }
-
-            document.addEventListener('DOMContentLoaded', includeFooter);
-        </script>
-
-
-
-    </head>
-    <body>
-        <div id="header-placeholder"></div>
-        
-        <h1 class="gallerytitle">My Gallery</h1>
-        <figure class="jason">
-        <img src="images/01:08:24/IMG_2891.jpeg">
-        <img src="images/01:08:24/IMG_2875.jpeg">
-        <img src="images/01:08:24/IMG_2899.jpeg">
-        <img src="images/01:08:24/IMG_2911.jpeg">
+    <!-- Gallery Container -->
+    <div class="gallery-container">
+        <!-- Gallery Item 1 -->
+        <figure class="gallery-item">
+            <img src="images/01:08:24/IMG_2891.jpeg" alt="Description of Image 1" loading="lazy">
+            <figcaption>Image 1 Description</figcaption>
         </figure>
 
-        <figure class="aaron">
-            <img src="images/01:24/IMG_3715.JPG">
-            <img src="images/01:24/IMG_3726.JPG">
-            <img src="images/01:24/IMG_3769.JPG">
-            <img src="images/01:24/IMG_3757.JPG">
+        <!-- Gallery Item 2 -->
+        <figure class="gallery-item">
+            <img src="images/01:08:24/IMG_2875.jpeg" alt="Description of Image 2" loading="lazy">
+            <figcaption>Image 2 Description</figcaption>
         </figure>
 
-
-        <figure class="aniya">
-            <img src="images/Aniya /IMG_4995.JPG">
-            <img src="images/Aniya /IMG_4951.JPG">
-            <img src="images/01:26/IMG_3806.JPG">
-            <img src="images/01:26/IMG_3815.JPG">
+        <!-- Gallery Item 3 -->
+        <figure class="gallery-item">
+            <img src="images/01:08:24/IMG_2899.jpeg" alt="Description of Image 3" loading="lazy">
+            <figcaption>Image 3 Description</figcaption>
         </figure>
 
-
-        <figure class="nesha">
-            <img src="images/November 28/IMG_3212.JPG">
-            <img src="images/November 28/IMG_3158.JPG">
-            <img src="images/November 28/IMG_3225.JPG">
-            <img src="images/November 28/IMG_3285.JPG">
+        <!-- Gallery Item 4 -->
+        <figure class="gallery-item">
+            <img src="images/01:08:24/IMG_2911.jpeg" alt="Description of Image 4" loading="lazy">
+            <figcaption>Image 4 Description</figcaption>
         </figure>
 
-
-
-        <figure class="gassi">
-            <img src="images/November /IMG_3025.JPG">
-            <img src="images/November /IMG_3022.JPG">
-            <img src="images/November /IMG_3031.JPG">
-            <img src="images/November /IMG_3050.JPG">
+        <!-- Gallery Item 5 -->
+        <figure class="gallery-item">
+            <img src="images/01:24/IMG_3715.JPG" alt="Description of Image 5" loading="lazy">
+            <figcaption>Image 5 Description</figcaption>
         </figure>
 
-
-        <figure class="bme">
-            <img src="images/bme/IMG_3656.JPG">
-            <img src="images/bme/IMG_3666.JPG">
-            <img src="images/bme/IMG_3677.JPG">
-            <img src="images/bme/IMG_3649.JPG">
+        <!-- Gallery Item 6 -->
+        <figure class="gallery-item">
+            <img src="images/01:24/IMG_3726.JPG" alt="Description of Image 6" loading="lazy">
+            <figcaption>Image 6 Description</figcaption>
         </figure>
 
-        <figure class="duo">
-            <img src="images/July/IMG_4790.JPG">
-            <img src="images/July/IMG_4822.JPG">
-            <img src="images/July/IMG_4854.JPG">
-            <img src="images/July/IMG_4724.JPG">
+        <!-- Gallery Item 7 -->
+        <figure class="gallery-item">
+            <img src="images/01:24/IMG_3769.JPG" alt="Description of Image 7" loading="lazy">
+            <figcaption>Image 7 Description</figcaption>
         </figure>
-    </body>
-    <!--Navgation-->
-    <script>
-        function toggleDropdown() {
-            document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
-        }
-        document.querySelector('.toggle').addEventListener('click', toggleDropdown);
-    </script>
 
+        <!-- Gallery Item 8 -->
+        <figure class="gallery-item">
+            <img src="images/01:24/IMG_3757.JPG" alt="Description of Image 8" loading="lazy">
+            <figcaption>Image 8 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 9 -->
+        <figure class="gallery-item">
+            <img src="images/Aniya /IMG_4995.JPG" alt="Description of Image 9" loading="lazy">
+            <figcaption>Image 9 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 10 -->
+        <figure class="gallery-item">
+            <img src="images/Aniya /IMG_4951.JPG" alt="Description of Image 10" loading="lazy">
+            <figcaption>Image 10 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 11 -->
+        <figure class="gallery-item">
+            <img src="images/01:26/IMG_3806.JPG" alt="Description of Image 11" loading="lazy">
+            <figcaption>Image 11 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 12 -->
+        <figure class="gallery-item">
+            <img src="images/01:26/IMG_3815.JPG" alt="Description of Image 12" loading="lazy">
+            <figcaption>Image 12 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 13 -->
+        <figure class="gallery-item">
+            <img src="images/November 28/IMG_3212.JPG" alt="Description of Image 13" loading="lazy">
+            <figcaption>Image 13 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 14 -->
+        <figure class="gallery-item">
+            <img src="images/November 28/IMG_3158.JPG" alt="Description of Image 14" loading="lazy">
+            <figcaption>Image 14 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 15 -->
+        <figure class="gallery-item">
+            <img src="images/November 28/IMG_3225.JPG" alt="Description of Image 15" loading="lazy">
+            <figcaption>Image 15 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 16 -->
+        <figure class="gallery-item">
+            <img src="images/November 28/IMG_3285.JPG" alt="Description of Image 16" loading="lazy">
+            <figcaption>Image 16 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 17 -->
+        <figure class="gallery-item">
+            <img src="images/November /IMG_3025.JPG" alt="Description of Image 17" loading="lazy">
+            <figcaption>Image 17 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 18 -->
+        <figure class="gallery-item">
+            <img src="images/November /IMG_3022.JPG" alt="Description of Image 18" loading="lazy">
+            <figcaption>Image 18 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 19 -->
+        <figure class="gallery-item">
+            <img src="images/November /IMG_3031.JPG" alt="Description of Image 19" loading="lazy">
+            <figcaption>Image 19 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 20 -->
+        <figure class="gallery-item">
+            <img src="images/November /IMG_3050.JPG" alt="Description of Image 20" loading="lazy">
+            <figcaption>Image 20 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 21 -->
+        <figure class="gallery-item">
+            <img src="images/bme/IMG_3656.JPG" alt="Description of Image 21" loading="lazy">
+            <figcaption>Image 21 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 22 -->
+        <figure class="gallery-item">
+            <img src="images/bme/IMG_3666.JPG" alt="Description of Image 22" loading="lazy">
+            <figcaption>Image 22 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 23 -->
+        <figure class="gallery-item">
+            <img src="images/bme/IMG_3677.JPG" alt="Description of Image 23" loading="lazy">
+            <figcaption>Image 23 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 24 -->
+        <figure class="gallery-item">
+            <img src="images/bme/IMG_3649.JPG" alt="Description of Image 24" loading="lazy">
+            <figcaption>Image 24 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 25 -->
+        <figure class="gallery-item">
+            <img src="images/July/IMG_4790.JPG" alt="Description of Image 25" loading="lazy">
+            <figcaption>Image 25 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 26 -->
+        <figure class="gallery-item">
+            <img src="images/July/IMG_4822.JPG" alt="Description of Image 26" loading="lazy">
+            <figcaption>Image 26 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 27 -->
+        <figure class="gallery-item">
+            <img src="images/July/IMG_4854.JPG" alt="Description of Image 27" loading="lazy">
+            <figcaption>Image 27 Description</figcaption>
+        </figure>
+
+        <!-- Gallery Item 28 -->
+        <figure class="gallery-item">
+            <img src="images/July/IMG_4724.JPG" alt="Description of Image 28" loading="lazy">
+            <figcaption>Image 28 Description</figcaption>
+        </figure>
+    </div>
+
+    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
+</body>
 </html>

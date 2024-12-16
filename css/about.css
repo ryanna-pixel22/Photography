@@ -1,51 +1,48 @@
 /*This is the CSS page connected to my About.HTML*/
 body{
-    background: rgb(239,213,242);
-    background: radial-gradient(circle, rgba(239,213,242,1) 16%, rgba(210,162,242,1) 30%, rgba(183,141,242,1) 49%, rgba(109,191,242,1) 69%, rgba(187,221,242,1) 86%);
+  background: rgb(239,213,242);
+  background: radial-gradient(circle, rgba(239,213,242,1) 16%, rgba(210,162,242,1) 30%, rgba(183,141,242,1) 49%, rgba(109,191,242,1) 69%, rgba(187,221,242,1) 86%);
 }
 
+.abouttitle{
+  display:flex;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight:800;
+  font-style:italic;
+}
 
-  .abouttitle{
-    display:flex;
-    justify-content: center;
-    font-family: "Playfair Display", serif;
-      font-optical-sizing: auto;
-      font-weight:800;
-      font-style:italic;
-  }
-
-  h2{
-    font-family: "Playfair Display", serif;
-      font-optical-sizing: auto;
-      font-weight:600;
-      font-style: normal;
-  }
-
-  p{
-    padding:1.0em;
-    font-family: "Playfair Display", serif;
-      font-optical-sizing: auto;
-      font-weight:400;
-      font-size: 15px;
-      font-style: normal;
-  }
-
-  .farewell{
-    font-family: "Playfair Display", serif;
-      font-optical-sizing: auto;
-      font-weight:400;
-      font-style: normal;
-    padding:1.0em;
-  }
-  .about-image{
-    width:45%;
-    margin:0.5em;
-    display:flex;
-    justify-content:end;
-    border-radius:50%;
-  }
-  .about-section{
-   display:flex;
-    align-items:center;
-    justify-content: space-between;
-  }
+h2{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight:600;
+  font-style: normal;
+}
+p{
+  padding:1.0em;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-size: 15px;
+  font-style: normal;
+}
+.farewell{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  padding:1.0em;
+}
+.about-image{
+  width:45%;
+  margin:0.5em;
+  display:flex;
+  justify-content:end;
+  border-radius:50%;
+}
+.about-section{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}

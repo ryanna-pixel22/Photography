@@ -1,7 +1,7 @@
+<!--This Contact page withholds all my personal information to allow potential clients 
+interested to contact me about future photography sessions.-->
 <!DOCTYPE html>
 <html lang="en">
-    <!--This Contact page withholds all my personal information to allow potential clients 
-        interested to contact me about future photography sessions.-->
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,52 +22,8 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin=""/>
 
-        <!-- Header Inclusion Script -->
-        <script>
-            function includeHeader() {
-                fetch('header.html')
-                    .then(response => {
-                        if (!response.ok) throw new Error('Network response was not ok');
-                        return response.text();
-                    })
-                    .then(data => {
-                        document.getElementById('header-placeholder').innerHTML = data;
-                        
-                        const toggleButton = document.querySelector('.toggle');
-                        const navMenu = document.getElementById('nav-menu');
-                        
-                        if (toggleButton && navMenu) {
-                            toggleButton.addEventListener('click', () => {
-                                navMenu.classList.toggle('show');
-                            });
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error fetching the header:', error);
-                    });
-            }
-
-            document.addEventListener('DOMContentLoaded', includeHeader);
-        </script>
-
-        <!-- Footer Inclusion Script -->
-        <script>
-            function includeFooter() {
-                fetch('footer.html')
-                    .then(response => {
-                        if (!response.ok) throw new Error('Network response was not ok');
-                        return response.text();
-                    })
-                    .then(data => {
-                        document.getElementById('footer-placeholder').innerHTML = data;
-                    })
-                    .catch(error => {
-                        console.error('Error fetching the footer:', error);
-                    });
-            }
-
-            document.addEventListener('DOMContentLoaded', includeFooter);
-        </script>
+        <!--Javascript-->
+        <script src="javascript/include.js"></script>
 
     </head>
     <body>
@@ -115,14 +71,6 @@
     }).addTo(map);
         </script>
 
-
-    <!--Navgation-->
-        <script>
-            function toggleDropdown() {
-                document.querySelectorAll('.item').forEach(item => item.classList.toggle('show'));
-            }
-            document.querySelector('.toggle').addEventListener('click', toggleDropdown);
-        </script>
 
     <div id="footer-placeholder"></div>
 
