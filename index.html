@@ -3,6 +3,12 @@ I360 Web Design Template (Given From Class)
 This is the homepage of my website, which provides a glimpse
     of my overall website and is interactive for my audience. 
 -->
+<!-- 
+  Carousel on this page is from Bootstrap 4:
+  Documentation: https://getbootstrap.com/docs/4.0/components/carousel/ 
+  Used under the Bootstrap license.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,58 +34,14 @@ This is the homepage of my website, which provides a glimpse
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+        <!--Javascript for header and footer-->
+        <script src="javascript/include.js"></script>
 
-    <!-- Header Inclusion Script -->
-        <script>
-            function includeHeader() {
-                fetch('components/header.html')
-                    .then(response => {
-                        if (!response.ok) throw new Error('Network response was not ok');
-                        return response.text();
-                    })
-                    .then(data => {
-                        document.getElementById('header-placeholder').innerHTML = data;
-                        
-                        const toggleButton = document.querySelector('.toggle');
-                        const navMenu = document.getElementById('nav-menu');
-                        
-                        if (toggleButton && navMenu) {
-                            toggleButton.addEventListener('click', () => {
-                                navMenu.classList.toggle('show');
-                            });
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error fetching the header:', error);
-                    });
-            }
-
-            document.addEventListener('DOMContentLoaded', includeHeader);
-        </script>
-
-        <!-- Footer Inclusion Script -->
-        <script>
-            function includeFooter() {
-                fetch('components/footer.html')
-                    .then(response => {
-                        if (!response.ok) throw new Error('Network response was not ok');
-                        return response.text();
-                    })
-                    .then(data => {
-                        document.getElementById('footer-placeholder').innerHTML = data;
-                    })
-                    .catch(error => {
-                        console.error('Error fetching the footer:', error);
-                    });
-            }
-
-            document.addEventListener('DOMContentLoaded', includeFooter);
-        </script>
     </head>
 
     <body>
         <div id="header-placeholder"></div>
-        <!--Bootstrap Lesson 21-->
+        <!--Bootstrap Lesson 21 Carousel, images taken by Ryanna-->
         <div id="home" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -107,12 +69,13 @@ This is the homepage of my website, which provides a glimpse
             </a>
 
         </div>
-
+          <!--About me section-->
             <h2 class="homeaboutme">About Me</h2>
             <p>Hello, My name is Ryanna Jelks! I am an aspiring photographer that developed a passion for the art of photography
             in highschool. I recently have been countuining this passion since I have been on Indiana University Campus. I
             started taking landscape photos now I have been taking portraits of friends.Being able to make people feel like
             themselves and bring out their confidence.</p>
+            <!--Link to take you to the full about me page -->
             <a href="about.html">LEARN MORE</a>
 
             <!--Bootstrap js-->

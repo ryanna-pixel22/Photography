@@ -1,5 +1,10 @@
 <!--This Contact page withholds all my personal information to allow potential clients 
 interested to contact me about future photography sessions.-->
+<!-- 
+  Map provided by Leaflet (https://leafletjs.com/).
+  Tiles and data by OpenStreetMap (https://www.openstreetmap.org).
+  Used for educational purposes for I360 final project.
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -26,6 +31,7 @@ interested to contact me about future photography sessions.-->
         <script src="javascript/include.js"></script>
 
     </head>
+    <!--used icons from fontawesome-->
     <body>
         <div id="header-placeholder"></div>
         <h1 class="contacttitle">Contact</h1>
@@ -48,6 +54,7 @@ interested to contact me about future photography sessions.-->
         </section>
 
         <section>
+        <!--tried to link instagram as an interactive feature-->
         <a href="https://www.instagram.com/rycapturedit/profilecard/?igsh=MTVwZW1xMWg3eXFodQ==" class="icon"></a>
             <i class="fa-brands fa-square-instagram"></i>
             <div>
@@ -55,7 +62,7 @@ interested to contact me about future photography sessions.-->
             <p>ryacapturedit</p>
         </div>
         </section>
-
+        <!--map feature so the clients can see the area that I do most of my work at... bloomington-->
         <div id="map">
         var map = L.map('map').setView([51.505, -0.09], 13);
         </div>

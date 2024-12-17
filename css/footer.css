@@ -1,14 +1,14 @@
 /*This is the CSS page connected to my Footer.HTML*/
 body{
   font-family:"Playfair Display", serif;
-  font-optical-sizing: auto;
   font-weight:800;
   font-style: normal;
-  font-size: 800;
+  font-size: 800px;
   background:white;
 }
+
 h2{
-  font-size: 800;
+  font-size: 800px;
 }
 footer{
   padding:2.0em;

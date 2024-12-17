@@ -1,4 +1,4 @@
-
+// This the javascript to for my header and footer. This will allow the header and footer functions to work properly
 
 function includeHeader() {
     fetch('components/header.html')

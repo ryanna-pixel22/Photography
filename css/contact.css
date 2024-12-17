@@ -1,10 +1,11 @@
 /*This is the CSS page connected to my Contact.HTML*/
 body{
-    background-color: #BBDDF2;
+   /*https://cssgradient.io*/
+  background: rgb(239, 213, 242);
+  background: radial-gradient(circle, rgba(239, 213, 242, 1) 16%, rgba(210, 162, 242, 1) 30%, rgba(183, 141, 242, 1) 49%, rgba(109, 191, 242, 1) 69%, rgba(187, 221, 242, 1) 86%);
 }
 .contacttitle{
     font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
     font-weight: 700;
     font-style:italic;
     display: flex;
@@ -13,7 +14,6 @@ body{
 }
 .socials{
     font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
 }

@@ -24,14 +24,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:#6DBFF2;
+  background-color:#A36CE0;
   padding: 1em 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .siteheadertitle {
+  font-family: "Playfair Display", serif;
   font-weight: 400;
-  font-style: italic;
+ font-style: italic; 
   margin: 0.5em 0;
   font-size: 2.5em;
   color: #333;
@@ -58,10 +59,12 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
+  justify-content:space-between;
   gap: 1em;
   margin: 0;
-  padding: 0;
+  padding:1.0em;
+
 }
 
 .toggle {
@@ -95,7 +98,6 @@ body {
 
 .navcontent.show .item {
   display: block;
-  background-color: #6DBFF2;
 }
 
 
@@ -215,6 +217,7 @@ section {
  8. Footer Styling
 ------------------------------ */
 .sitefooter {
+  font-family: "Playfair Display", serif;
   padding: 1em;
   background: #6DBFF2;
   display: flex;
@@ -248,13 +251,13 @@ section {
 ------------------------------ */
 a:link,
 a:visited {
-  color: #BBDDF2;
+  color:#333;
   text-decoration: none;
 }
 
 a:hover,
 a:active {
-  color: white;
+  color:black;
 }
 
 /* -----------------------------

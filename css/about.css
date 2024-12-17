@@ -8,28 +8,24 @@ body{
   display:flex;
   justify-content: center;
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
   font-weight:800;
   font-style:italic;
 }
 
 h2{
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
   font-weight:600;
   font-style: normal;
 }
 p{
   padding:1.0em;
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
   font-weight:400;
   font-size: 15px;
   font-style: normal;
 }
 .farewell{
   font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
   font-weight:400;
   font-style: normal;
   padding:1.0em;
