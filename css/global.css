@@ -60,10 +60,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items:center;
-  justify-content:space-between;
+  justify-content:center;
   gap: 1em;
   margin: 0;
-  padding:1.0em;
 
 }
 
@@ -74,7 +73,7 @@ body {
 }
 
 .toggle:hover {
-  color: #B78DF2;
+  color:#6DBFF2;
 }
 
 .item {
@@ -92,7 +91,7 @@ body {
 }
 
 .item a:hover {
-  color: #B78DF2;
+  color:#6DBFF2;
   background-color: rgba(255, 255, 255, 0.8);
 }
 

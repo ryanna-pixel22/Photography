@@ -31,6 +31,7 @@ p{
   padding:1.0em;
 }
 .about-image{
+ /*flexbox*/
   width:45%;
   margin:0.5em;
   display:flex;
@@ -38,7 +39,15 @@ p{
   border-radius:50%;
 }
 .about-section{
+  /*flexbox*/
   display:flex;
   align-items:center;
   justify-content: space-between;
+}
+
+
+@media (min-width: 576px) {
+  p {
+    padding:1.0em;
+  }
 }

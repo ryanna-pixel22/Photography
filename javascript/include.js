@@ -1,5 +1,8 @@
-// This the javascript to for my header and footer. This will allow the header and footer functions to work properly
+// These functions are called into each of my HTML Pages, with instructions that allows each page to be interactive. 
+// when called with <script src="javascript/include.js"></script> it fetchs the header and the footer 
+// Then, it replaces the respective placeholders with each page by the content of the header and footer
 
+// For the header, This script allows a button on the header to be interactive and this icon apears when the screen is smaller than the size of the window.
 function includeHeader() {
     fetch('components/header.html')
         .then(response => {

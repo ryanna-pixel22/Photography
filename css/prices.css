@@ -6,19 +6,21 @@ body{
 }
 
 .sessions{
+  /*flexbox*/
   display: flex;
   justify-content: center;
 }
 
 .pricetitles{
+    /*flexbox*/
   display: flex;
   justify-content: center;
-  background-color:#EFD5F2;
-  padding:0.5em;
   border: #EFD5F2;
   font-family: "Playfair Display", serif;
+  font-size: 35px;
   font-weight:500;
   font-style :italic;
+  padding-top: 1.0em;
 }
 
 h3{

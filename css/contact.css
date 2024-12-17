@@ -5,6 +5,7 @@ body{
   background: radial-gradient(circle, rgba(239, 213, 242, 1) 16%, rgba(210, 162, 242, 1) 30%, rgba(183, 141, 242, 1) 49%, rgba(109, 191, 242, 1) 69%, rgba(187, 221, 242, 1) 86%);
 }
 .contacttitle{
+      /*flexbox*/
     font-family: "Playfair Display", serif;
     font-weight: 700;
     font-style:italic;
